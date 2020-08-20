@@ -61,4 +61,9 @@ function rBinarySearch(arr, val){
 }
 console.log(rBinarySearch([1,3,5,6],4));
 
+//Given two integers, create rGCF(num1,num2) to recursively determine Greatest Common Factor (the largest integer dividing evenly into both). Greek mathematician Euclid demonstrated these facts:
 
+//gcf(a,b) == a, if a == b;
+//gcf(a,b) == gcf(a-b,b), if a>b;
+//gcf(a,b) == gcf(a,b-a), if b>a.
+//Second: rework facts #2 and #3 to reduce stack consumption and expand rGCF’s reach. You should  be able to compute rGCF(123456,987654).

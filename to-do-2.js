@@ -36,4 +36,4 @@ function countdown(num){
         countdown(num-1);
     }
 }
-console.log(countdown(10));
+countdown(10);

@@ -37,3 +37,28 @@ function countdown(num){
     }
 }
 countdown(10);
+
+
+//Given a sorted array and a value, recursively determine whether value is found within array. 
+
+//rBinarySearch([1,3,5,6],4) = false; 
+
+//rBinarySearch([4,5,6,8,12],5) = true.
+
+function rBinarySearch(arr, val){
+    if (arr.length == 0){
+        return false;
+    }
+    else if (arr[arr.length - 1] == val){
+        console.log("Made it to the promise land");
+        return true;
+    }
+    else {
+        arr.pop();
+        console.log(arr);
+       return rBinarySearch(arr, val);
+    }
+}
+console.log(rBinarySearch([1,3,5,6],4));
+
+

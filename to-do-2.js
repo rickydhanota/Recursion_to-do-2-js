@@ -20,9 +20,11 @@ function rFib(num){//Initial function call is rFib(5)
     }//rFib(1) = 1, rFib(0) = 0
 
 }
-console.log(rFib(9));//1+1+1+0+1+0+1
+// console.log(rFib(9));
+//1+1+1+0+1+0+1
 //Fibonacci = 0(position 0), 1(position 1), 1, 2, 3, 5
 
+///////////////////////////////////////////////////////////////////////////////////////////
 
 //2. Write function rTrib(num) to mimic Fibonacci, adding previous three values instead of two. First three Tribonacci numbers are 0, 0, 1, so rTrib(3) = 1 (0+0+1); rTrib(4) = 2 (0+1+1); rTrib(5) = 4 (1+1+2); rTrib(6) = 7 (1+2+4). Handle negatives and non-integers appropriately and inexpensively.
 
@@ -36,8 +38,9 @@ function countdown(num){
         countdown(num-1);
     }
 }
-countdown(10);
+// countdown(10);
 
+//////////////////////////////////////////////////////////////////////////////////////////////
 
 //Given a sorted array and a value, recursively determine whether value is found within array. 
 
@@ -59,7 +62,9 @@ function rBinarySearch(arr, val){
        return rBinarySearch(arr, val);
     }
 }
-console.log(rBinarySearch([1,3,5,6],4));
+// console.log(rBinarySearch([1,3,5,6],4));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Given two integers, create rGCF(num1,num2) to recursively determine Greatest Common Factor (the largest integer dividing evenly into both). Greek mathematician Euclid demonstrated these facts:
 
@@ -67,3 +72,20 @@ console.log(rBinarySearch([1,3,5,6],4));
 //gcf(a,b) == gcf(a-b,b), if a>b;
 //gcf(a,b) == gcf(a,b-a), if b>a.
 //Second: rework facts #2 and #3 to reduce stack consumption and expand rGCF’s reach. You should  be able to compute rGCF(123456,987654).
+
+
+function rGCF(num1, num2){
+    if (num1 == num2){
+        console.log(num1);
+        return num1;
+    }
+    else{
+        if(num1>num2){
+            return rGCF(num1 - num2, num2);
+        }
+        else if(num1<num2){
+            return rGCF(num1, num2 - num1);
+        }
+    }
+}
+console.log(rGCF(123456,987654));

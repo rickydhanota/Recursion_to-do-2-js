@@ -81,11 +81,15 @@ function rGCF(num1, num2){
     }
     else{
         if(num1>num2){
-            return rGCF(num1 - num2, num2);
+            num1 = num1 -num2;
+            // return rGCF(num1 - num2, num2);
         }
         else if(num1<num2){
-            return rGCF(num1, num2 - num1);
+            num2 = num2 - num1;
+            // return rGCF(num1, num2 - num1);
         }
+        return rGCF(num1, num2);
     }
 }
+console.log(rGCF(40,5));
 console.log(rGCF(123456,987654));
